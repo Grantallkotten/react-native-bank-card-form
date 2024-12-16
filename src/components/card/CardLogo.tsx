@@ -18,6 +18,7 @@ const CardLogo: React.FC<CardLogoProps> = ({
   return (
     <Animated.Image
       source={logoSource}
+      // eslint-disable-next-line react-native/no-inline-styles
       style={{
         height: logoHeight,
         width: logoWidth,
