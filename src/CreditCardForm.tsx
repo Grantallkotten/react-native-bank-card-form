@@ -1,10 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 import { colors, sizes } from './styles/theme';
 import Card from './components/card/Card';
@@ -21,6 +15,18 @@ type Props = {
   // style?: { [key: string]: string };
 };
 
+/**
+ * Credit Card Form Component
+ *
+ * A React Native UI component to handle credit card input values. Has multiple callback functions to handle changes within the component.
+ *
+ * @param {Object} props - The properties for the CreditCardForm component.
+ * @param {(cardNumber: string) => void} [props.onCardNumberChange] - Callback triggered when the card number changes.
+ * @param {(cardName: string) => void} [props.onCardNameChange] - Callback triggered when the cardholder name changes.
+ * @param {(cvv: string) => void} [props.onCVVChange] - Callback triggered when the CVV changes.
+ * @param {(month: string) => void} [props.onExpirationMonthChange] - Callback triggered when the expiration month changes.
+ * @param {(year: string) => void} [props.onExpirationYearChange] - Callback triggered when the expiration year changes.
+ */
 export default function CreditCardForm({
   onCardNumberChange,
   onCardNameChange,
@@ -178,9 +184,6 @@ export default function CreditCardForm({
               />
             </View>
           </View>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Submit</Text>
-          </TouchableOpacity>
         </View>
       </View>
     </ExpirationProvider>
@@ -195,7 +198,7 @@ const styles = StyleSheet.create({
 
   container: {
     width: 350,
-    height: 400,
+    height: 325,
     marginVertical: 4,
     padding: 20,
     backgroundColor: colors.container,
