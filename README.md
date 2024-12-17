@@ -2,6 +2,10 @@
 
 A React Native UI component designed to handle credit card input values. It includes multiple callback functions to manage changes within the component.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0ab0f509-7189-4b0b-853a-1345a8070cb7" alt="demo" style="width: 50%;"/>
+</div>
+
 ## Installation
 
 ```sh
