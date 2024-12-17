@@ -1,5 +1,5 @@
-import CreditCardForm from 'react-native-credit-card-form';
+import BankCardForm from 'react-native-bank-card-form';
 
 export default function App() {
-  return <CreditCardForm />;
+  return <BankCardForm />;
 }

@@ -16,18 +16,18 @@ type Props = {
 };
 
 /**
- * Credit Card Form Component
+ * Bank Card Form Component
  *
- * A React Native UI component to handle credit card input values. Has multiple callback functions to handle changes within the component.
+ * A React Native UI component to handle bank card input values. Has multiple callback functions to handle changes within the component.
  *
- * @param {Object} props - The properties for the CreditCardForm component.
+ * @param {Object} props - The properties for the BankCardForm component.
  * @param {(cardNumber: string) => void} [props.onCardNumberChange] - Callback triggered when the card number changes.
  * @param {(cardName: string) => void} [props.onCardNameChange] - Callback triggered when the cardholder name changes.
  * @param {(cvv: string) => void} [props.onCVVChange] - Callback triggered when the CVV changes.
  * @param {(month: string) => void} [props.onExpirationMonthChange] - Callback triggered when the expiration month changes.
  * @param {(year: string) => void} [props.onExpirationYearChange] - Callback triggered when the expiration year changes.
  */
-export default function CreditCardForm({
+export default function BankCardForm({
   onCardNumberChange,
   onCardNameChange,
   onCVVChange,

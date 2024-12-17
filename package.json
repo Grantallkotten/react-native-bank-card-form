@@ -1,5 +1,5 @@
 {
-  "name": "react-native-credit-card-form",
+  "name": "react-native-bank-card-form",
   "version": "0.1.0",
   "description": ".",
   "source": "./src/index.tsx",
@@ -37,7 +37,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-credit-card-form-example",
+    "example": "yarn workspace react-native-bank-card-form-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -52,14 +52,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Grantallkotten/react-native-credit-card-form.git"
+    "url": "git+https://github.com/Grantallkotten/react-native-bank-card-form.git"
   },
   "author": "Rasmus Svala <rasmus.svala@hotmail.com> (https://github.com/Grantallkotten)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Grantallkotten/react-native-credit-card-form/issues"
+    "url": "https://github.com/Grantallkotten/react-native-bank-card-form/issues"
   },
-  "homepage": "https://github.com/Grantallkotten/react-native-credit-card-form#readme",
+  "homepage": "https://github.com/Grantallkotten/react-native-bank-card-form#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -181,7 +181,7 @@
     ]
   },
   "codegenConfig": {
-    "name": "RNCreditCardFormSpec",
+    "name": "RNBankCardFormSpec",
     "type": "modules",
     "jsSrcsDir": "src",
     "outputDir": {
@@ -189,7 +189,7 @@
       "android": "android/generated"
     },
     "android": {
-      "javaPackageName": "com.creditcardform"
+      "javaPackageName": "com.bankcardform"
     }
   },
   "create-react-native-library": {

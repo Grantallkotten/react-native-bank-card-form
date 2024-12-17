@@ -1,3 +1,3 @@
-import CreditCardForm from './CreditCardForm';
+import BankCardForm from './CreditCardForm';
 
-export default CreditCardForm;
+export default BankCardForm;

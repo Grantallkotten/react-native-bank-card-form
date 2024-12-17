@@ -1,17 +1,17 @@
-# react-native-credit-card-form
+# react-native-bank-card-form
 
-A React Native UI component designed to handle credit card input values. It includes multiple callback functions to manage changes within the component.
+A React Native UI component designed to handle bank card input values. It includes multiple callback functions to manage changes within the component.
 
 ## Installation
 
 ```sh
-npm install react-native-credit-card-form
+npm install react-native-bank-card-form
 ```
 
 ## Usage
 
 ```ts
-import CreditCardForm from 'react-native-credit-card-form';
+import BankCardForm from 'react-native-bank-card-form';
 
 export default function App() {
 
@@ -36,7 +36,7 @@ export default function App() {
   };
 
   return (
-    <CreditCardForm
+    <BankCardForm
       onCVVChange={handleCVVChange}
       onCardNameChange={handleCardNameChange}
       onCardNumberChange={handleCardNumberChange}

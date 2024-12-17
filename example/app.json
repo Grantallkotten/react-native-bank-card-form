@@ -14,14 +14,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "creditcardform.example"
+      "bundleIdentifier": "bankcardform.example"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "creditcardform.example"
+      "package": "bankcardform.example"
     },
     "web": {
       "favicon": "./assets/favicon.png"

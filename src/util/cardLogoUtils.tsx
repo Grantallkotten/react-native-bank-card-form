@@ -3,10 +3,10 @@ import type { ImageSourcePropType } from 'react-native';
 let lastValidCardType = 'Unknown';
 
 /**
- * Algorithm found at: https://www.regular-expressions.info/creditcard.html
+ * Algorithm found at: https://www.regular-expressions.info/bankcard.html
  * Find all cards at wiki: https://en.wikipedia.org/wiki/Payment_card_number
  *
- * This function detect credit card type based on the first four digits of a card.
+ * This function detect bank card type based on the first four digits of a card.
  * Note: Cards get updated all the time, so some algorithms may be outdated.
  *
  * @param {string} firstFourDigits - The first four digits of the card.

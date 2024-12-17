@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-credit-card-form": ["./src/index"]
+      "react-native-bank-card-form": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
