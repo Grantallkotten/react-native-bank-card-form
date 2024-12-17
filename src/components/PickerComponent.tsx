@@ -11,15 +11,19 @@ import {
 import { colors, sizes } from '../styles/theme';
 import { useExpiration } from './ExpirationContext';
 
-interface PickerComponentProps {
+type Props = {
   onFocus?: () => void;
   onBlur?: () => void;
-}
+  onMonthChange?: (value: string) => void;
+  onYearChange?: (value: string) => void;
+};
 
-const PickerComponent: React.FC<PickerComponentProps> = ({
+const PickerComponent = ({
   onFocus,
   onBlur,
-}) => {
+  onMonthChange,
+  onYearChange,
+}: Props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [activeSelection, setActiveSelection] = useState<'month' | 'year'>(
     'month'
@@ -35,10 +39,17 @@ const PickerComponent: React.FC<PickerComponentProps> = ({
   );
 
   const handleSelect = (value: string) => {
-    if (activeSelection === 'month') {
-      updateMonth(value);
-    } else {
-      updateYear(value);
+    switch (activeSelection) {
+      case 'month':
+        updateMonth(value);
+        onMonthChange?.(value);
+        break;
+      case 'year':
+        updateYear(value);
+        onYearChange?.(value);
+        break;
+      default:
+        console.error('Invalid selection:', activeSelection);
     }
   };
 

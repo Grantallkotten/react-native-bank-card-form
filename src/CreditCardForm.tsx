@@ -12,7 +12,22 @@ import PickerComponent from './components/PickerComponent';
 import { useState, useEffect } from 'react';
 import { ExpirationProvider } from './components/ExpirationContext';
 
-export default function CreditCardForm() {
+type Props = {
+  onCardNumberChange?: (value: string) => void;
+  onCardNameChange?: (value: string) => void;
+  onExpirationMonthChange?: (value: string) => void;
+  onExpirationYearChange?: (value: string) => void;
+  onCVVChange?: (value: string) => void;
+  // style?: { [key: string]: string };
+};
+
+export default function CreditCardForm({
+  onCardNumberChange,
+  onCardNameChange,
+  onCVVChange,
+  onExpirationMonthChange,
+  onExpirationYearChange,
+}: Props) {
   const cardNameInit = 'FULL NAME';
   const cvvInit = '';
   const carNumberInit = '';
@@ -32,6 +47,18 @@ export default function CreditCardForm() {
   const [randBackgrounImageIndex] = useState<string>(
     (Math.floor(Math.random() * 21) + 1).toString()
   );
+
+  useEffect(() => {
+    onCardNumberChange?.(cardNumberInputValue);
+  }, [cardNumberInputValue, onCardNumberChange]);
+
+  useEffect(() => {
+    onCardNameChange?.(cardNameInputValue);
+  }, [cardNameInputValue, onCardNameChange]);
+
+  useEffect(() => {
+    onCVVChange?.(cvvNumberInputValue);
+  }, [cvvNumberInputValue, onCVVChange]);
 
   const handleTextChange = (
     text: string,
@@ -127,6 +154,8 @@ export default function CreditCardForm() {
             <View style={styles.expirationDatesInputsContainer}>
               <Text style={styles.singleInputFieldText}>Expiration Date</Text>
               <PickerComponent
+                onMonthChange={(value) => onExpirationMonthChange?.(value)}
+                onYearChange={(value) => onExpirationYearChange?.(value)}
                 onFocus={() => setFocus('expires')}
                 onBlur={() => setFocus('')}
               />
@@ -160,12 +189,8 @@ export default function CreditCardForm() {
 
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 1,
-    backgroundColor: colors.background,
     alignItems: 'center',
     justifyContent: 'center',
-
-    zIndex: 0,
   },
 
   container: {
