@@ -1,7 +1,7 @@
 {
   "name": "react-native-bank-card-form",
   "version": "1.0.1",
-  "description": ".",
+  "description": "A React Native UI component to handle bank card input values. Has multiple callback functions to handle changes within the component.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
